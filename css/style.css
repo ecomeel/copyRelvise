@@ -105,6 +105,9 @@ html, body {
     line-height: 171%;
     font-weight: 600;
 }
+.menu__link:hover {
+    text-decoration: underline;
+}
 @media (max-width: 479px) {
     .menu__link {
         font-size: 18px;
@@ -221,6 +224,7 @@ html, body {
 }
 .services__body {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -15px;
 }
 .services__column {
@@ -231,6 +235,8 @@ html, body {
     box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
     background-color: #fff;
     padding: 35px;
+    height: 250px;
+    min-width: 240px;
 }
 .item-service {
 
@@ -262,5 +268,5 @@ html, body {
 }
 /* --------- FOOTER ---------- */
 .footer {
-
+    margin: 10px 15px;
 }
