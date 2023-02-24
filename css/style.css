@@ -237,6 +237,7 @@ html, body {
     padding: 35px;
     height: 250px;
     min-width: 240px;
+    max-height: 250px;
 }
 .item-service {
 
