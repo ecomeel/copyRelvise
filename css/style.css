@@ -81,7 +81,7 @@ a, a:hover, a:active {
   justify-content: space-between;
 }
 
-.cards-list .experience-item .item-service__icon-box, .cards-list .item-service .item-service__icon-box {
+.cards-list .card-list__item div {
   width: 48px;
   height: 48px;
 }
@@ -95,20 +95,59 @@ body, html {
   height: 100%;
 }
 
+body {
+  background-color: #FAFAFA;
+}
+
 .wrapper {
   min-height: 100%;
-  width: 100%;
   overflow: hidden;
-  background-color: #FAFAFA;
 }
 
 .page > * {
   padding: 80px 0;
 }
 
-.header {
-  padding: 0;
+.title-block {
+  width: 864px;
+  text-align: center;
 }
+.title-block .title-block__subtitle {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+  margin-left: 127.5px;
+}
+.title-block .title-block__description {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #737373;
+  margin: 0 176.5px;
+}
+
+.cards-list .card-list__item {
+  height: 100%;
+  background-color: #fff;
+}
+.cards-list .card-list__item h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+}
+.cards-list .card-list__item p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #737373;
+}
+
 .header .logo {
   margin: 23px 0;
   vertical-align: top;
@@ -172,59 +211,25 @@ body, html {
   color: #0D5C63;
 }
 
-.cards-list .item-service {
-  height: 100%;
-  max-width: 329px;
-  background-color: white;
-  padding: 40px 30px;
-  box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
-}
-.cards-list .item-service .item-service__title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0.01em;
-  margin-bottom: 10px;
-}
-.cards-list .item-service .item-service__desc {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  color: #737373;
-}
-.cards-list .experience-item {
-  height: 100%;
-  max-width: 230px;
-  background-color: white;
-  padding: 40px 30px;
-}
-.cards-list .experience-item .item-service__title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0.01em;
-  margin-bottom: 10px;
-}
-.cards-list .experience-item .item-service__desc {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  color: #737373;
-}
-
-.title-block {
-  width: 864px;
-  text-align: center;
-}
-
 .services {
   margin-top: -111px;
+}
+.services .item-service {
+  max-width: 329px;
+  padding: 40px 35px;
+  box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
 }
 .services .item-service_green {
   background-color: #0D5C63;
 }
 .services .item-service_green, .services .item-service_green .item-service__desc {
   color: white;
+}
+
+.experience .experience__subtitle {
+  margin-bottom: 50px;
+}
+.experience .experience__item {
+  max-width: 230px;
+  padding: 30px 40px;
 }/*# sourceMappingURL=style.css.map */

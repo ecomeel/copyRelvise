@@ -12,21 +12,53 @@ body, html {
     line-height: 1;
     height: 100%;
 }
-.wrapper {    
-    min-height: 100%;
-    width: 100%;
-    overflow: hidden;
+body {
     background-color: #FAFAFA;
 
 }
+.wrapper {    
+    min-height: 100%;
+    overflow: hidden;
+}
+
 .page > * {
     padding: 80px 0 ;
 }
 
+
+.title-block {
+    width: 864px;
+    text-align: center;
+    .title-block__subtitle {
+        @include ttl;
+        margin-left: 127.5px;
+
+    }
+    .title-block__description {
+        @include descr;
+        margin: 0 176.5px;
+    }
+
+}
+.cards-list {
+    @extend %cards-row;
+    .card-list__item {
+        @include card;
+        div {
+            @extend %icon-box;
+        }
+        h3 {
+            @include sub-ttl(10px);
+        }
+        p {
+            @include descr;
+        }
+    }
+}
+
+
 .header {
     @extend %container;
-    padding: 0;
-
     .logo{
         margin: 23px 0;
         vertical-align: top;
@@ -83,42 +115,14 @@ body, html {
     }
 }
 
-.cards-list {
-    @extend %cards-row;
-    & .item-service {
-        @include card (329px);
-        box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
-        .item-service__icon-box {
-            @extend %icon-box;
-        }
-        .item-service__title {
-            @include sub-ttl(10px);
-        }
-        .item-service__desc {
-            @include descr;
-        }
-    }
-    // problem
-    & .experience-item {
-        @include card (230px);
-        .item-service__icon-box {
-            @extend %icon-box;
-        }
-        .item-service__title {
-            @include sub-ttl(10px);
-        }
-        .item-service__desc {
-            @include descr;
-        }
-    }
-}
-.title-block {
-    width: 864px;
-    text-align: center
-}
 .services {
     @extend %container;
     margin-top: -111px;
+    .item-service {
+        max-width: 329px;
+        padding: 40px 35px;
+        box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
+    }
     .item-service_green {
         background-color: $secondary-color;
         &, .item-service__desc {
@@ -129,4 +133,12 @@ body, html {
 
 .experience {
     @extend %container;
+    .experience__subtitle {
+        margin-bottom: 50px;
+    }
+    .experience__item {
+        max-width: 230px;
+        padding: 30px 40px;
+    }
 }
+
