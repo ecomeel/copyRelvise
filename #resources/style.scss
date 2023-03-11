@@ -85,7 +85,7 @@ body, html {
 .cards-list {
     @extend %cards-row;
     & .item-service {
-        @include card (329px, 35px);
+        @include card (329px);
         box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
         .item-service__icon-box {
             @extend %icon-box;
@@ -99,7 +99,7 @@ body, html {
     }
     // problem
     & .experience-item {
-        @include card (230px, 30px);
+        @include card (230px);
         .item-service__icon-box {
             @extend %icon-box;
         }
@@ -110,6 +110,10 @@ body, html {
             @include descr;
         }
     }
+}
+.title-block {
+    width: 864px;
+    text-align: center
 }
 .services {
     @extend %container;

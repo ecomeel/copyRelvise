@@ -36,9 +36,9 @@
     letter-spacing: $ls;
     color: $cl;
 }
-@mixin card ($mx-width, $side-padding) {
+@mixin card ($mx-width) {
     height: 100%;
     max-width: $mx-width;
     background-color: white;
-    padding: 40px $side-padding;
+    padding: 40px 30px;
 }

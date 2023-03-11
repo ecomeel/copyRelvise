@@ -175,7 +175,7 @@ body, html {
   height: 100%;
   max-width: 329px;
   background-color: white;
-  padding: 40px 35px;
+  padding: 40px 30px;
   box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
 }
 .cards-list .item-service .item-service__title {
@@ -211,6 +211,11 @@ body, html {
   line-height: 20px;
   letter-spacing: 0.02em;
   color: #737373;
+}
+
+.title-block {
+  width: 864px;
+  text-align: center;
 }
 
 .services {
