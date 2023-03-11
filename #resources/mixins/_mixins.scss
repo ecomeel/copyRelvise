@@ -1,0 +1,44 @@
+@import '../vars/_vars';
+
+
+@mixin ttl ($fz: 40px, $fw: 700, $lh: 57px, $mb: 10px, $ls: 0.02em) {
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+    margin-bottom: $mb;
+}
+@mixin sub-ttl ($mb: 0, $fw: 700, $fz: 24px, $lh: 32px, $ls: 0.01em) {
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+    margin-bottom: $mb;
+}
+@mixin small-sub-ttl ($mb: 0, $fw: 700, $fz: 16px, $lh: 24px, $ls: 0.01em) {
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+    margin-bottom: $mb;
+}
+@mixin smallest-sub-ttl ($fw: 600, $fz: 14px, $lh: 24px, $ls: 0.02em) {
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+    color: $secondary-fcolor;
+}
+@mixin descr ($fz: 14px, $fw: 500, $lh: 20px, $ls: 0.02em, $cl: $secondary-fcolor) {
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+    color: $cl;
+}
+@mixin card ($mx-width, $side-padding) {
+    height: 100%;
+    max-width: $mx-width;
+    background-color: white;
+    padding: 40px $side-padding;
+}

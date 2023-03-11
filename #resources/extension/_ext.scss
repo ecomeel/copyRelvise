@@ -1,0 +1,28 @@
+@import '../vars/vars';
+@import '../mixins/mixins';
+
+%container {
+    max-width: 1045px;
+    margin: 0 auto;
+}
+%main-btn {
+    @include small-sub-ttl(0, 700, 14px, 28px, 0.02em);
+    border-radius: 37px;
+    min-height: 48px;
+    padding: 5px 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $btn-color;
+    color: white;
+}
+%cards-row {
+    display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+%icon-box {
+    width: 48px;
+    height: 48px;
+}

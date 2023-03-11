@@ -1,0 +1,127 @@
+@import 'reset/_reset';
+@import 'vars/_vars';
+@import 'mixins/_mixins';
+@import 'extension/_ext';
+
+
+body, html {
+    color: $fcolor;
+    font-family: Montserrat;
+    font-size: $desc-fsize;
+    font-weight: $desc-fsize;
+    line-height: 1;
+    height: 100%;
+}
+.wrapper {    
+    min-height: 100%;
+    overflow: hidden;
+    background-color: #FAFAFA;
+
+}
+.page > * {
+    padding: 80px 0 ;
+}
+
+.header {
+    @extend %container;
+    padding: 0;
+
+    .logo{
+        margin: 23px 0;
+        vertical-align: top;
+        display: inline-block;
+        padding: 13px 96px 13px 0;
+        margin-right: 36px;
+
+        .logo__name {
+            @include sub-ttl();
+        }
+    }
+    .navigation {
+        display: inline-block;
+        margin: 40px 0;
+
+        .nav-list {
+            display: flex;
+            column-gap: 21px;
+
+            .nav-list__item_link {
+                @include smallest-sub-ttl;
+                &:hover{
+                    color: $fcolor;
+                }
+            }
+        }
+    }
+}
+
+.main-block {
+    @extend %container;
+    .main-block__body {
+        width: 508px;
+        .main-block__title {
+            @include ttl (57px, 800, 80px, 35px);
+        }
+        .main-block__desc {
+            @include descr (20px, 500, 30px);
+            margin-bottom: 35px;
+        }
+        .main-block__buttons {
+            display: inline-flex;
+            column-gap: 10px;
+            .main-block__button {
+                @extend %main-btn;
+            }
+            .main-block__button_green {
+                @extend %main-btn;
+                border: 1px solid #0D5C63;
+                background-color: transparent;
+                color: #0D5C63;
+            }
+        }
+    }
+}
+
+.cards-list {
+    @extend %cards-row;
+    & .item-service {
+        @include card (329px, 35px);
+        box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
+        .item-service__icon-box {
+            @extend %icon-box;
+        }
+        .item-service__title {
+            @include sub-ttl(10px);
+        }
+        .item-service__desc {
+            @include descr;
+        }
+    }
+    // problem
+    & .experience-item {
+        @include card (230px, 30px);
+        .item-service__icon-box {
+            @extend %icon-box;
+        }
+        .item-service__title {
+            @include sub-ttl(10px);
+        }
+        .item-service__desc {
+            @include descr;
+        }
+    }
+}
+.services {
+    @extend %container;
+    margin-top: -111px;
+    .item-service_green {
+        background-color: $secondary-color;
+        &, .item-service__desc {
+            color: white;
+        }
+    }
+}
+
+.experience {
+    @extend %container;
+}
